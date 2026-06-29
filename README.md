@@ -20,4 +20,5 @@ And each time you open a porn website, you get redirected to that YouTube Video.
 ## Technologies used
 
 Svelte (Frontend Framework)
+
 Wxt (Browser-extension Framework)
