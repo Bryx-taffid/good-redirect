@@ -2,7 +2,10 @@ name: gitleaks
 on:
   pull_request:
   push:
-  workflow_dispatch:
+permissions:
+  contents: read
+  security-events: write # for creating security alerts
+  pull-requests: write # for pull request comments
 jobs:
   scan:
     name: gitleaks
