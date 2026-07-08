@@ -1,24 +1,47 @@
-# Good Redirect - Stop bad online behaviours
+# Good Redirect
 
-**TODO**: This project is Work-In-Progress. Please do not use it yet, it simply does not work.
+> ⚠️ **Work in progress:** this project is currently in active development. The features described below are planned and **do not exist yet**.
 
-## Goal
+Good Redirect is a browser extension designed to help people reduce unwanted online habits.
 
-You may do stuff online that you do not want to do anymore. So you want to get rid of something, and this extension is meant to help you.
-Everytime you visit such a website, you are redirected to another website where you get reminded why you should not do that. Or where you get inspiration what to do instead.
+Instead of relying on willpower in the moment, the extension aims to redirect visits from distracting or harmful websites to pages that reinforce healthier choices.
 
-## How it works
+## Why this project exists
 
-After installation of the browser extension, configure what type of content you want to avoid. The following presets are available:
+Many online behaviors happen quite automatically, but may be bad: gambling, watching porn, or way too much social media. Good Redirect aims to prevent you from doing that, by redirecting you from such "bad sites" to better ones, that either remind you why you should not do that bad behaviour, or that present you alternatives of what to do instead.
 
-- Porn [WIP - Tbd]
-- Gambling [WIP - Tbd]
+The goal: replacing bad habits with better ones.
 
-Then, you have to insert the website (URL) you want to get redirected to, each time you call such an unwanted site. For example, you could enable the porn preset and set the URL to a YouTube Video that explains why watching porn could harm you.
-And each time you open a porn website, you get redirected to that YouTube Video.
+## How it is intended to work
+
+After installing the extension, users will be able to:
+
+1. Select behavior presets to avoid (for example, porn or gambling).
+2. Configure a personal redirect URL for each preset.
+3. Get redirected each time a matching website is opened.
+
+Example:
+- A user enables the gambling preset.
+- They set a redirect URL to a helpful video why not to gamble, and why gambling is bad.
+- When they try to open a matching site, Good Redirect sends them to that helpful video instead.
+
+## Planned features
+
+- Presets for common unwanted behavior categories (gambling, porn, maybe social media)
+- Custom redirect targets per category
+- Simple, focused configuration UI
+
+## Contributing
+
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
+
+Note that contributions may not be accepted in early stages of the project, if I want to code the browser extension on myself.
+
+## License
+
+This project is licensed under the terms described in [LICENSE.md](./LICENSE.md).
 
 ## Technologies used
 
-Svelte (Frontend Framework)
-
-Wxt (Browser-extension Framework)
+- [Svelte](https://svelte.dev/) — frontend framework
+- [WXT](https://wxt.dev/) — browser extension framework
