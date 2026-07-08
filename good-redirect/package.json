@@ -1,6 +1,6 @@
 {
-  "name": "wxt-svelte-starter",
-  "description": "manifest.json description",
+  "name": "good-redirect",
+  "description": "Helps to quit bad behaviour in the internet, by redirecting to good websites that tell you why you should not do that or what you could do instead. May help against habits like gambling or watching porn",
   "private": true,
   "version": "0.0.0",
   "type": "module",
