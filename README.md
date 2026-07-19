@@ -44,4 +44,3 @@ This project is licensed under the terms described in [LICENSE.md](./LICENSE.md)
 ## Technologies used
 
 - [Svelte](https://svelte.dev/) — frontend framework
-- [WXT](https://wxt.dev/) — browser extension framework
