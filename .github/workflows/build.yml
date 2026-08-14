@@ -1,0 +1,29 @@
+name: Build and Test # The purpose is to build the project, and run tests (if any)
+on:
+  pull_request:
+    branches:
+      - main
+
+
+permissions: { }
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout # Check where to add the contents: read permission, cause permissions only on job, not on step level??
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
+        with:
+          persist-credentials: 'false'
+      - name: pnpm (with runtime) # Try to use it right
+        uses: pnpm/setup@84cb39b217b10273981911c288cd62326dc7c6d2 #v2.0.2
+        with:
+          version: ^11.21
+          runtime: node@lts
+      - name: Build the browser extension
+        run: pnpm run build
+        working-directory: good-redirect/
+
+      # TODO: Add testing
