@@ -13,7 +13,6 @@ on:
   pull_request:
     branches:
       - main
-      - master
 
 # Comment env block if you do not want to apply fixes
 env:
@@ -69,7 +68,7 @@ jobs:
 
           # If you use VALIDATE_ALL_CODEBASE = true, you can remove this line to
           # improve performance
-          fetch-depth: 0
+      # fetch-depth: 0
 
       # MegaLinter
       - name: MegaLinter
