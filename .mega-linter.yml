@@ -26,3 +26,9 @@ SHOW_ELAPSED_TIME: true
 
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass
 # DISABLE_ERRORS: true
+
+# Exclude directories like .idea or .vscode, which are generated and not maintained by me
+ADDITIONAL_EXCLUDED_DIRECTORIES:
+  - .idea
+  - .vscode
+  - .svelte-kit
