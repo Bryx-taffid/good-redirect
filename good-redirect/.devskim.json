@@ -4,6 +4,8 @@
     "**/megalinter-reports/**",
     "**/.idea/**",
     "**/.vscode/**",
-    "**/.svelte-kit/**"
-  ]
+    "**/.svelte-kit/**",
+    "**/*lock*"
+  ],
+  "RespectGitIgnore": true
 }
