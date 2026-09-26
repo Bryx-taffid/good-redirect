@@ -32,3 +32,7 @@ ADDITIONAL_EXCLUDED_DIRECTORIES:
   - .idea
   - .vscode
   - .svelte-kit
+
+# Fix Zizmor fail by giving it the needed Github-Token:
+ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
+  - GITHUB_TOKEN
