@@ -36,3 +36,6 @@ ADDITIONAL_EXCLUDED_DIRECTORIES:
 # Fix Zizmor fail by giving it the needed Github-Token:
 ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
   - GITHUB_TOKEN
+
+# Consider djlint (HTML linting) errors as warnings:
+HTML_DJLINT_DISABLE_ERRORS: true
