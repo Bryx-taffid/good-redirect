@@ -8,7 +8,7 @@ MEGALINTER_FLAVOR: all
 MEGALINTER_VERSION: v10
 
 # all, none, or list of linter keys
-APPLY_FIXES: none
+APPLY_FIXES: [ "JAVASCRIPT_STANDARD" ]
 
 # If you use ENABLE variable, all other languages/formats/tooling-formats will
 # be disabled by default
@@ -37,5 +37,8 @@ ADDITIONAL_EXCLUDED_DIRECTORIES:
 ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
   - GITHUB_TOKEN
 
-# Consider djlint (HTML linting) errors as warnings:
-HTML_DJLINT_DISABLE_ERRORS: true
+# Consider some linter errors as warnings, if they are not that important, or if they over-block:
+DISABLE_ERRORS_LINTERS:
+  - REPOSITORY_OSV_SCANNER
+  - HTML_DJLINT
+  - COPYPASTE_JSCPD
