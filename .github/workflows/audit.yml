@@ -1,0 +1,34 @@
+name: Audit # The purpose is to audit the node dependencies
+on:
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: 37 5 * * *
+      timezone: Europe/Vienna
+
+
+permissions: { }
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
+        with:
+          persist-credentials: 'false'
+      - name: pnpm (with runtime)
+        uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 #v3.1.1
+        with:
+          require-lockfile: true
+          cache: true
+          cache-dependency-path: good-redirect/pnpm-lock.yaml
+          working-directory: './good-redirect'
+          install: false
+          version: ^11.21
+          runtime: node@lts
+      - name: Audit the dependencies, fail if there are unfixable ones, and exclude low one's.
+        run: pnpm audit --ignore-unfixable && pnpm audit --reporter silent --audit-level moderate

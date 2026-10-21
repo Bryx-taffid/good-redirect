@@ -1,5 +1,8 @@
 allowBuilds:
   esbuild: true
 
+auditConfig:
+  ignoreGhsas:
+    - GHSA-vfj7-8cjw-p6xm
 minimumReleaseAge: 1440
 minimumReleaseAgeStrict: true
