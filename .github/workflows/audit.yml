@@ -28,7 +28,5 @@ jobs:
           cache-dependency-path: good-redirect/pnpm-lock.yaml
           working-directory: './good-redirect'
           install: false
-          version: ^11.21
-          runtime: node@lts
       - name: Audit the dependencies, fail if there are unfixable ones, and exclude low one's.
         run: pnpm audit --ignore-unfixable && pnpm audit --reporter silent --audit-level moderate
