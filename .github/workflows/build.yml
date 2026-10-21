@@ -24,7 +24,6 @@ jobs:
           install: false
           working-directory: './good-redirect'
           cache: true
-          cache-dependency-path: './good-redirect/pnpm-lock.yaml'
       - name: Install the node packages
         run: pnpm ci
       - name: Build the browser extension

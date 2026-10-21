@@ -25,7 +25,6 @@ jobs:
         with:
           require-lockfile: true
           cache: true
-          cache-dependency-path: good-redirect/pnpm-lock.yaml
           working-directory: './good-redirect'
           install: false
       - name: Audit the dependencies, fail if there are unfixable ones, and exclude low one's.
