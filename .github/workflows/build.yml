@@ -26,5 +26,7 @@ jobs:
           cache: true
       - name: Install the node packages
         run: pnpm ci
+        working-directory: './good-redirect'
       - name: Build the browser extension
         run: pnpm run build
+        working-directory: './good-redirect'

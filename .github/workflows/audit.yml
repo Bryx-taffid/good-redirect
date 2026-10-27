@@ -29,3 +29,4 @@ jobs:
           install: false
       - name: Audit the dependencies, fail if there are unfixable ones, and exclude low one's.
         run: pnpm audit --ignore-unfixable && pnpm audit --reporter silent --audit-level moderate
+        working-directory: './good-redirect'
