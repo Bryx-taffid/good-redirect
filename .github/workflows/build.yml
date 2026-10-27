@@ -20,8 +20,13 @@ jobs:
       - name: pnpm (with runtime)
         uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 #v3.1.1
         with:
-          version: ^11.21
-          runtime: node@lts
+          require-lockfile: true
+          install: false
+          working-directory: './good-redirect'
+          cache: true
+      - name: Install the node packages
+        run: pnpm ci
+        working-directory: './good-redirect'
       - name: Build the browser extension
         run: pnpm run build
-        working-directory: good-redirect/
+        working-directory: './good-redirect'
