@@ -3,9 +3,7 @@ on:
   pull_request:
     branches:
       - main
-  schedule:
-    - cron: 37 5 * * *
-      timezone: Europe/Vienna
+  workflow_dispatch:
 
 
 permissions: { }
