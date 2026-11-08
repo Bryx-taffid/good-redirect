@@ -9,11 +9,6 @@
     "service_worker": "background.js",
     "type": "module"
   },
-  "permissions": [
-    "storage",
-    "declarativeNetRequestWithHostAccess"
-  ],
-  "host_permissions": [
-    "<all_urls>"
-  ]
+  "permissions": [],
+  "host_permissions": []
 }
