@@ -4,7 +4,7 @@
   "description": "TODO description",
   "type": "module",
   "scripts": {
-    "build": "tsc && node scripts/copy-static.mjs",
+    "build": "node scripts/copy-static.mjs && tsc --outDir dist",
     "watch": "tsc --watch",
     "clean": "node scripts/copy-static.mjs --clean"
   },
