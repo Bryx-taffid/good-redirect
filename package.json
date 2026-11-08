@@ -1,0 +1,32 @@
+{
+  "name": "good-redirect",
+  "version": "0.1.0",
+  "description": "TODO description",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/copy-static.mjs && tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "clean": "node scripts/copy-static.mjs --clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bryx-taffid/good-redirect.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "@eslint/css": "^2.0.1",
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^2.1.1",
+    "chrome-types": "0.1.463",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "^8.72.1"
+  }
+}
