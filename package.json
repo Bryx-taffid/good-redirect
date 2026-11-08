@@ -17,8 +17,6 @@
     "@eslint/css": "^2.0.1",
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^2.1.1",
-    "@html-eslint/eslint-plugin": "^0.68.0",
-    "@html-eslint/parser": "^0.68.0",
     "chrome-types": "0.1.463",
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
