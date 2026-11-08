@@ -14,7 +14,7 @@
   },
   "private": true,
   "devDependencies": {
-    "chrome-types": "^0.1.463",
-    "typescript": "^7.0.2"
+    "chrome-types": "0.1.463",
+    "typescript": "7.0.2"
   }
 }

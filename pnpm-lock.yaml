@@ -9,10 +9,10 @@ importers:
   .:
     devDependencies:
       chrome-types:
-        specifier: ^0.1.463
+        specifier: 0.1.463
         version: 0.1.463
       typescript:
-        specifier: ^7.0.2
+        specifier: 7.0.2
         version: 7.0.2
 
 packages:
