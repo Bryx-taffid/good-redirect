@@ -6,6 +6,10 @@
   "scripts": {
     "build": "node scripts/copy-static.mjs && tsc",
     "watch": "tsc --watch",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
     "clean": "node scripts/copy-static.mjs --clean"
   },
   "repository": {
