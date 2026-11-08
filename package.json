@@ -1,0 +1,20 @@
+{
+  "name": "good-redirect",
+  "version": "0.1.0",
+  "description": "TODO description",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && node scripts/copy-static.mjs",
+    "watch": "tsc --watch",
+    "clean": "node scripts/copy-static.mjs --clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bryx-taffid/good-redirect.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "chrome-types": "^0.1.463",
+    "typescript": "^7.0.2"
+  }
+}
