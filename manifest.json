@@ -3,10 +3,10 @@
   "name": "Good Redirect",
   "version": "0.1.0",
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "static/popup.html"
   },
   "background": {
-    "service_worker": "background.js",
+    "service_worker": "dist/background.js",
     "type": "module"
   },
   "permissions": [
