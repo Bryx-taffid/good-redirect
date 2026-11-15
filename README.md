@@ -20,7 +20,7 @@ The goal: replacing bad habits with better ones.
 
 After installing the extension, users will be able to:
 
-1. Select behavior presets to avoid (for example, porn or gambling).
+1. Select behavior presets to avoid.
 2. Configure a personal redirect URL for each preset.
 3. Get redirected each time a matching website is opened.
 
