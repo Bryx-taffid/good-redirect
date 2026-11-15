@@ -45,6 +45,7 @@ jobs:
         with:
           persist-credentials: "true"
           ref: ${{ github.head_ref }}
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
       - name: Setup pnpm
         uses: pnpm/setup@fa36a5ef7dcdefc3a7cb25655c122e00cf6e636e #v3.1.2
         with:
