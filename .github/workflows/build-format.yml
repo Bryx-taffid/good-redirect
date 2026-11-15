@@ -1,0 +1,63 @@
+name: Build and Lint
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  build:
+    name: build project
+    runs-on: ubuntu-26
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: "false"
+      - name: Setup pnpm
+        uses: pnpm/setup@fa36a5ef7dcdefc3a7cb25655c122e00cf6e636e #v3.1.2
+        with:
+          require-lockfile: "true"
+          install: false
+          cache: true
+          save-cache: ${{ github.ref == 'refs/heads/main' }}
+      - name: Install the node packages
+        run: pnpm ci
+      - name: Build project
+        run: pnpm build # debug build, to check if everything is okay
+
+  lint-format:
+    name: lint and format project
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-26
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: "true"
+          ref: ${{ github.head_ref }}
+      - name: Setup pnpm
+        uses: pnpm/setup@fa36a5ef7dcdefc3a7cb25655c122e00cf6e636e #v3.1.2
+        with:
+          require-lockfile: "true"
+          install: false
+          cache: true
+          save-cache: "false"
+      - name: Install the node packages
+        run: pnpm ci
+      - name: Lint project # ESLint
+        run: pnpm lint:fix
+      - name: Format project # Prettier
+        run: pnpm format:fix
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@d0b01107b5db882071f96de5dd4b54961ea93f4c #v7.2.1
+        with:
+          commit_message: "style: lint and format code"
