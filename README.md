@@ -32,7 +32,7 @@ Example:
 
 ## Planned features
 
-- Presets for common unwanted behavior categories (gambling, pornography, maybe social media)
+- Presets for common unwanted behavior categories
 - Custom redirect targets per category
 - Simple, focused configuration UI
 
