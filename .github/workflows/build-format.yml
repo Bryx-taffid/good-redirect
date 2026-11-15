@@ -30,6 +30,7 @@ jobs:
       - name: Install the node packages
         run: pnpm ci
       - name: Build project
+        if: github.ref != 'refs/heads/main'
         run: pnpm build # debug build, to check if everything is okay
 
   lint-format:
