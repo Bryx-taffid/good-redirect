@@ -7,7 +7,7 @@
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": "^26.0.0",
+      "version": "^26.13.1",
       "onFail": "download"
     }
   },
@@ -29,12 +29,12 @@
     "@eslint/css": "^2.0.1",
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^2.1.1",
-    "chrome-types": "0.1.463",
-    "eslint": "^10.14.0",
+    "chrome-types": "0.1.464",
+    "eslint": "^10.15.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.14.0",
-    "prettier": "3.9.10",
+    "prettier": "3.10.1",
     "typescript": "6.0.3",
-    "typescript-eslint": "^8.72.1"
+    "typescript-eslint": "^8.72.2"
   }
 }
