@@ -1,0 +1,29 @@
+.subtitle {
+  color: lightgrey;
+}
+
+/* The input css is to show if the URL is valid (from the format).
+    Inspired by: https://developer.mozilla.org/de/docs/Web/HTML/Reference/Elements/input/url
+ */
+
+input:focus:invalid[type="url"] {
+  outline: 2px solid red;
+}
+
+input:focus:valid[type="url"] {
+  outline: 2px solid green;
+}
+
+input[type="url"] + span {
+  padding: 0 0.3rem;
+}
+
+input[type="url"]:invalid + span::after {
+  content: "✖" / "Content is not valid";
+  color: red;
+}
+
+input[type="url"]:valid + span::after {
+  content: "✓" / "Content is valid";
+  color: green;
+}
