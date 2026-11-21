@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Good Redirect</title>
@@ -7,5 +7,34 @@
   </head>
   <body>
     <script src="popup.js" type="module"></script>
+    <h1>Good Redirect</h1>
+    <h2 class="subtitle">Get out of the bad habits.</h2>
+    <p>Redirects websites of the enabled categories to better alternatives.</p>
+    <hr />
+    <!--TODO: Have a solid line around the categories.-->
+    <!--TODO: Use a "switcher" instead of a checkbox.-->
+    <!--TODO: Use TS and CSS to display if the typed-in URL is correct/incorrect-->
+    <div>
+      <input
+        type="checkbox"
+        id="gambling-on"
+        name="gambling-on"
+        title="If gambling websites should be redirected or not."
+      />
+      <label for="gambling-on">Gambling</label><br /><br />
+      <label for="gambling-url"
+        >Redirect Gambling websites to the following URL:</label
+      ><br />
+      <input
+        type="url"
+        id="gambling-url"
+        name="gambling-url"
+        placeholder="https://example.com"
+        pattern="https://.*"
+        title="The URL where gambling websites get redirected to (if the gambling preset is enabled)."
+      />
+      <span class="validity"></span>
+    </div>
+    <hr />
   </body>
 </html>
